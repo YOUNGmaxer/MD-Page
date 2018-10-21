@@ -13,6 +13,12 @@ module.exports = {
     filename: 'my-app.bundle.js'
   },
 
+  resolve: {
+    alias: {
+      views: path.resolve(__dirname, 'src/views')
+    }
+  },
+
   module: {
     rules: [
       // 为了使用单文件组件，需要引入 vue-loader
