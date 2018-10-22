@@ -1,6 +1,7 @@
 <template>
   <div>
-    hello world
+    <!-- 表示当前路由地址显示的内容 -->
+    <router-view></router-view>
   </div>
 </template>
 

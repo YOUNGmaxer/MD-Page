@@ -21,7 +21,8 @@
   "dependencies": {
     "babel-loader": "^8.0.4",
     "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

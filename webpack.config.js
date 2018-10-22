@@ -15,7 +15,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      views: path.resolve(__dirname, 'src/views')
+      Views: path.resolve(__dirname, './src/views')
     }
   },
 
