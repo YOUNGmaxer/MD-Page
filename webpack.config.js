@@ -15,7 +15,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      Views: path.resolve(__dirname, './src/views')
+      Views: path.resolve(__dirname, './src/views'),
+      Assets: path.resolve(__dirname, './src/assets')
     }
   },
 
@@ -37,11 +38,23 @@ module.exports = {
         }
       },
       {
-        test: /\.css/,
+        test: /\.scss/,
         include: [
-          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'src')
         ],
         use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.css/,
+        include: [
+          path.resolve(__dirname, 'src')
+        ],
+        use: [
+          'style-loader',
           'css-loader'
         ]
       }
