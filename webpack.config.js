@@ -32,9 +32,6 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
         }
       },
       {
@@ -51,12 +48,20 @@ module.exports = {
       {
         test: /\.css/,
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules/element-ui')
         ],
         use: [
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.(ttf|woff)$/,
+        include: [
+          path.resolve(__dirname, 'node_modules/element-ui')
+        ],
+        loader: 'file-loader'
       }
     ]
   },

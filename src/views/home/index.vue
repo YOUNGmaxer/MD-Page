@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>文件</div>
+    <readerHeader></readerHeader>
+    <el-button>默认按钮</el-button>
     <input type="file" @change="readFile"/>
     <section v-html="fileContent"></section>
   </div>
@@ -8,6 +9,7 @@
 
 <script>
 import showdown from 'showdown';
+import readerHeader from './components/Header.vue';
 
 const options = {
   tables: true,
@@ -18,6 +20,10 @@ const converter = new showdown.Converter(options);
 
 export default {
   name: "Home",
+
+  components: {
+    readerHeader
+  },
 
   data() {
     return {
