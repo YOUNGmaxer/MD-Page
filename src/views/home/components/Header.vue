@@ -1,6 +1,8 @@
 <template>
-  <div class="md-header">
-    Header  
+  <div class="md-header shadow">
+    <div class="md-header-menu material-icons">menu</div>
+    <div class="md-header-title">MD Reader</div>
+    <div class="md-header-search material-icons">search</div>
   </div>
 </template>
 
@@ -11,11 +13,5 @@ export default {
 </script>
 
 <style lang="scss">
-$el: 10px;
-.md-header {
-  text-align: center;
-  height: 64px;
-  line-height: 64px;
-  width: 10px/$el + px;
-}
+@import 'Header.scss';
 </style>

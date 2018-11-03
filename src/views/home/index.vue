@@ -2,7 +2,7 @@
   <div>
     <readerHeader></readerHeader>
     <el-button>默认按钮</el-button>
-    <input type="file" @change="readFile"/>
+    <!-- <input type="file" @change="readFile"/> -->
     <section v-html="fileContent"></section>
   </div>
 </template>

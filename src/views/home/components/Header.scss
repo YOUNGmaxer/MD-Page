@@ -1,0 +1,19 @@
+.md-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 0.64rem;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &.shadow {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  }
+}
+
+.md-header-menu, .md-header-search {
+  padding: 12px;
+}
