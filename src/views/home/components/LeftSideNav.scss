@@ -7,6 +7,7 @@
   opacity: 0;
   will-change: opacity;
   z-index: 20;
+  pointer-events: none;
 }
 
 .md-leftside-mask {

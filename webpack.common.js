@@ -1,25 +1,11 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const webpack = require('webpack');
 
 module.exports = {
-  mode: 'production',
-
-  devServer: {
-    // dev server 的配置要启动 hot，或者在命令行中带参数开启
-    hot: true
-  },
-
   entry: {
     main: './src/main.js',
     initSize: 'Assets/js/initSize.js'
-  },
-
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
   },
 
   resolve: {
@@ -27,9 +13,6 @@ module.exports = {
       Views: path.resolve(__dirname, './src/views'),
       Assets: path.resolve(__dirname, './src/assets')
     }
-  },
-
-  optimization: {
   },
 
   module: {
@@ -96,10 +79,11 @@ module.exports = {
       template: './src/assets/template.html'
     }),
     // 将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块。
-    new VueLoaderPlugin(),
-    // 用于启动 HMR 时可以显示模块的相对路径
-    new webpack.NamedModulesPlugin(),
-    // Hot Module Replacement 的插件
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new VueLoaderPlugin()
+  ],
+
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
+  }
 };
