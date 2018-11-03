@@ -1,7 +1,7 @@
 <template>
   <div>
-    <readerHeader></readerHeader>
-    <el-button>默认按钮</el-button>
+    <Header></Header>
+    <!-- <el-button>默认按钮</el-button> -->
     <!-- <input type="file" @change="readFile"/> -->
     <section v-html="fileContent"></section>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 import showdown from 'showdown';
-import readerHeader from './components/Header.vue';
+import Header from './components/Header.vue';
 
 const options = {
   tables: true,
@@ -22,7 +22,7 @@ export default {
   name: "Home",
 
   components: {
-    readerHeader
+    Header
   },
 
   data() {
