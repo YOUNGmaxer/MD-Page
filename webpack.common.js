@@ -11,7 +11,8 @@ module.exports = {
   resolve: {
     alias: {
       Views: path.resolve(__dirname, './src/views'),
-      Assets: path.resolve(__dirname, './src/assets')
+      Assets: path.resolve(__dirname, './src/assets'),
+      Styles: path.resolve(__dirname, './src/assets/styles')
     }
   },
 
@@ -23,7 +24,9 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src')
         ],
-        loader: 'vue-loader'
+        use: [
+          'vue-loader'
+        ]
       },
       {
         test: /\.js$/,

@@ -3,7 +3,16 @@
     :class="{ 'md-leftside-mask': isOpen }"
     @click="hideSideNav">
     <nav class="md-leftside-nav"
-      @click="keepSideNav"></nav>
+      :class="{ 'md-leftside-nav--open': isOpen }"
+      @click.stop="keepSideNav">
+      <section class="md-last-section">
+        <h2 class="md-last-header">最近打开</h2>
+        <ul class="md-last-list">
+          <li class="md-last-item">JS 高级程序设计</li>
+          <li class="md-last-item">JS 权威指南</li>
+        </ul>
+      </section>
+    </nav>
   </aside>
 </template>
 
@@ -31,7 +40,6 @@ export default {
       this.$store.commit('nav/CHANGE_OPEN_STATE');
     },
     keepSideNav() {
-      // this.$store.commit('nav/KEEP_OPEN_STATE');
       console.log('hello');
     }
   }
