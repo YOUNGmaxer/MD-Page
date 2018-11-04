@@ -33,14 +33,10 @@ export default {
   },
   methods: {
     ...mapMutations('nav', [
-      'CHANGE_OPEN_STATE',
-      'KEEP_OPEN_STATE'
+      'CHANGE_OPEN_STATE'
     ]),
     hideSideNav() {
       this.$store.commit('nav/CHANGE_OPEN_STATE');
-    },
-    keepSideNav() {
-      console.log('hello');
     }
   }
 }

@@ -1,9 +1,11 @@
+@import 'Styles/variables/index.scss';
+
 .md-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 56px;
+  height: var(--header-height);
   font-size: 18px;
   position: fixed;
   top: 0;
