@@ -1,0 +1,20 @@
+.md-addbtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #007fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+#add-file-btn {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
