@@ -1,13 +1,15 @@
 const state = {
-  isOpen: false
+  isOpen: false,
+  currentContent: null,
+  lastFiles: []
 };
 
 const mutations = {
   CHANGE_OPEN_STATE(state) {
     state.isOpen = !state.isOpen;
   },
-  KEEP_OPEN_STATE(state) {
-    state.isOpen = true;
+  GET_CURRENT_CONTENT(state, content) {
+    state.currentContent = content;
   }
 };
 
