@@ -10,7 +10,9 @@ module.exports = merge(common, {
   devServer: {
     contentBase: './dist',
     // dev server 的配置要启动 hot，或者在命令行中带参数开启
-    hot: true
+    hot: true,
+    host: '0.0.0.0', // 使得在同一局域网下，可以在手机上访问
+    disableHostCheck: true
   },
 
   plugins: [

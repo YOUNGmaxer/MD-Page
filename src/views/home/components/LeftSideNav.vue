@@ -4,12 +4,13 @@
     @click="hideSideNav">
     <nav class="md-leftside-nav"
       :class="{ 'md-leftside-nav--open': isOpen }"
-      @click.stop="keepSideNav">
+      @click.stop>
       <section class="md-last-section">
         <h2 class="md-last-header">最近打开</h2>
-        <ul class="md-last-list">
-          <li class="md-last-item">JS 高级程序设计</li>
-          <li class="md-last-item">JS 权威指南</li>
+        <ul class="md-last-list"
+          v-for="file of lastFiles"
+          :key="file.lastOpenTime">
+          <li class="md-last-item">{{ file.name }}</li>
         </ul>
       </section>
     </nav>
@@ -29,7 +30,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('nav', ['isOpen'])
+    ...mapState('nav', ['isOpen', 'lastFiles'])
   },
   methods: {
     ...mapMutations('nav', [

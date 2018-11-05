@@ -1,0 +1,4 @@
+/* 避免因为单词不换行造成页面溢出 */
+h1,h2,h3,h4,h5,h6,p,li {
+  word-break: break-all;
+}

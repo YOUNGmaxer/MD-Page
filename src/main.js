@@ -6,6 +6,7 @@ import store from './store';
 import { Button } from 'element-ui';
 import 'element-ui/';
 import 'Assets/styles/normalize.css';
+import 'Assets/styles/reset.css';
 import 'Assets/styles/material-icons.css';
 
 // 设置为 false 以阻止 vue 在启动时生成生产提示

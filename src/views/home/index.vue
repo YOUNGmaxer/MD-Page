@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Header></Header>
+    <Header/>
+    <Content/>
     <AddButton/>
     <!-- <el-button>默认按钮</el-button> -->
     <!-- <input type="file" @change="readFile"/> -->
@@ -11,6 +12,7 @@
 <script>
 import showdown from 'showdown';
 import Header from './components/Header.vue';
+import Content from './components/Content.vue';
 import AddButton from './components/AddButton.vue';
 
 const options = {
@@ -25,6 +27,7 @@ export default {
 
   components: {
     Header,
+    Content,
     AddButton
   },
 
